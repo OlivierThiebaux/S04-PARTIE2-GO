@@ -13,7 +13,7 @@ func main() {
 	somme := ajouter(3, 4)
 	log.Printf("la somme de 3 et 4 est : %v\n", somme)
 	log.Printf("la multiplication de 3 et 4: %v\n", multiplication(3, 4))
-	resultat, err := division(3, 0)
+	resultat, err := division(3, 1)
 	if err != nil {
 		log.Fatalf("alerte, division par zéro : %v", err)
 	}
