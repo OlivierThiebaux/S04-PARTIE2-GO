@@ -1,22 +1,13 @@
 package main
 
-import "log"
-
-func ajouter(a int, b int) int {
-	return a + b
-}
-
-var somme int
+import ("log"
+		"fmt"
+	)
 
 func main() {
-	log.Println(`Hello world !!!`)
-	somme := ajouter(3, 4)
-	log.Printf("la somme de 3 et 4 est : %v\n", somme)
-	log.Printf("la multiplication de 3 et 4: %v\n", multiplication(3, 4))
-	resultat, err := division(3, 1)
-	if err != nil {
-		log.Fatalf("alerte, division par zéro : %v", err)
-	}
-	log.Printf("la division de 3 et 4: %v", resultat)
-
+	//var task string
+	var reponse string
+	log.Printf("Ajouter une tâche: ")
+	fmt.Scanln(reponse)
+	log.Printf("reponse: %v", reponse)
 }
