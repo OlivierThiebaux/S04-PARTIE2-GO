@@ -1,0 +1,29 @@
+package main
+
+import "log"
+
+type Player struct {
+	pseudo string
+	age    int
+	hp     int
+	mp     int
+	sexe   string
+	intel  int
+}
+
+func (p *Player) setAge(age int) {
+	p.age = age
+}
+
+var (
+	player = make(map[string]Player)
+)
+
+func main() {
+	joueur2 := Player{pseudo: "Dark", age: 51, hp: 10, mp: 12, sexe: "", intel: 12}
+	player["Dark"] = joueur2
+	log.Printf("%#v", joueur2)
+
+	log.Printf("L'age de %v :%v", joueur2.pseudo, joueur2.age)
+	
+}

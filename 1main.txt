@@ -1,0 +1,23 @@
+package main
+
+import (
+    "log"
+    "time"
+)
+
+func main() {
+    log.Printf("Hello world!")
+    go printPeriodically()
+    for {
+        time.Sleep(time.Second * 15)
+        log.Print("moi j'attend")
+    }
+}
+
+func printPeriodically() {
+    for {
+        time.Sleep(time.Second * 1)
+        log.Print("Je spame, spame spame spame, c'est ma façon d'aimer")
+    }
+}
+
